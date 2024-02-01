@@ -24,7 +24,7 @@ pour afficher les slides en plein écran.
 
 Dans les chapitres précédents, nous avons vu un ensemble de bonnes pratiques qui permettent de considérablement améliorer la qualité d'un projet : rendre le code plus lisible, adopter une structure du projet normalisée et évolutive et versionner proprement son code sur un dépôt `GitHub` {{< fa brands github >}}.
 
-Une fois ces bonnes pratiques appliquées à notre projet, ce dernier apparaît largement partageable. Du moins en théorie, car la pratique est souvent plus compliquée : il y a fort à parier que si vous essayez d'exécuter votre projet sur un autre environnement d'exécution (un autre ordinateur, un serveur, etc.), les choses ne se passent pas du tout comme attendu. Cela signifie que qu'**en l'état, le projet n'est pas [portable]{.colorized} : il n'est pas possible, sans modifications coûteuses, de l'exécuter dans un environnement différent de celui dans lequel il a été développé**.
+Une fois ces bonnes pratiques appliquées à notre projet, ce dernier apparaît largement partageable. Du moins en théorie, car la pratique est souvent plus compliquée : il y a fort à parier que si vous essayez d'exécuter votre projet sur un autre environnement d'exécution (un autre ordinateur, un serveur, etc.), les choses ne se passent pas du tout comme attendu. Cela signifie qu'**en l'état, le projet n'est pas [portable]{.colorized} : il n'est pas possible, sans modifications coûteuses, de l'exécuter dans un environnement différent de celui dans lequel il a été développé**.
 
 La raison principale est qu'un code ne vit pas dans une bulle isolée, il contient en général de nombreuses adhérences, plus ou moins visibles, au langage et à l'environnement dans lesquels il a été développé :
 
@@ -141,7 +141,7 @@ On lit souvent, notamment chez les _afficionados_ de {{< fa brands r-project >}}
 La qualité supérieure des outils {{< fa brands r-project >}} pour la gestion des dépendances ne saute pas aux yeux: [`renv`](https://rstudio.github.io/renv/articles/renv.html) est très intéressant mais [ne permet pas de définir la version de 
 {{< fa brands r-project >}}](https://rstudio.github.io/renv/articles/renv.html#caveats) :
 
-> R version: renv tracks, but doesn’t help with, the version of R used with the packge. renv can’t easily help with this because it’s run inside of R, but you might find tools like rig helpful, as they make it easier to switch between multiple version of R on one computer.
+> R version: renv tracks, but doesn’t help with, the version of R used with the package. renv can’t easily help with this because it’s run inside of R, but you might find tools like rig helpful, as they make it easier to switch between multiple version of R on one computer.
 
 C'est, en fait, le problème principal des outils {{< fa brands r-project >}} pour la reproductibilité. Pour les utiliser, il faut souvent se trouver dans une session {{< fa brands r-project >}}, avec ses spécificités. Les outils {{< fa brands python >}} qui s'utilisent pas le biais de la ligne de commande offrent une robustesse plus importante. `venv` est certes dépendant de la version de {{< fa brands python >}} utilisée lors de la création de l'environnement mais le fait de passer par le terminal permet de choisir la version de {{< fa brands python >}} qui servira à créer l'environnement. Quant à `conda`, la version de {{< fa brands python >}} est définie dans le `environment.yml` ce qui donne une grande liberté.
 :::
